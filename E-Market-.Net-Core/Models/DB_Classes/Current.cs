@@ -20,6 +20,6 @@ namespace E_Market_.Net_Core.Models.DB_Classes
         [Column(TypeName = "Varchar")]
         [StringLength(50)]
         public string CurrentMail { get; set; }
-        public Sales Sales { get; set; }
+        public ICollection<Sales> Sales { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace E_Market_.Net_Core.Models.DB_Classes
         [Column(TypeName = "Varchar")]
         [StringLength(300)]
         public string Image { get; set; }
-        public Sales Sales { get; set; }  
+        public ICollection<Sales> Sales { get; set; }
         public Department Department { get; set; }
     }
 }

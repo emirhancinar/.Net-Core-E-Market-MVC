@@ -22,6 +22,6 @@ namespace E_Market_.Net_Core.Models.DB_Classes
         [StringLength(300)]
         public string Image { get; set; }
         public Category Category { get; set; }
-        public Sales Sales { get; set; }
+        public ICollection<Sales> Sales { get; set; }
     }
 }
