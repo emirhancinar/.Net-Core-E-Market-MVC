@@ -11,5 +11,18 @@ namespace E_Market_.Net_Core.Controllers
             var values=marketContext.Categories.ToList();
             return View(values);
         }
+        [HttpGet]
+        public ActionResult AddCategories()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddCategories(Category category)
+        {
+            marketContext.Categories.Add(category);
+            marketContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }
