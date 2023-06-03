@@ -23,6 +23,13 @@ namespace E_Market_.Net_Core.Controllers
             marketContext.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult CategoryDelete(int id)
+        {
+            var category = marketContext.Categories.Find(id);
+            marketContext.Categories.Remove(category);
+            marketContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }
