@@ -30,6 +30,13 @@ namespace E_Market_.Net_Core.Controllers
             marketContext.SaveChanges();
             return RedirectToAction("Index");
         }
+		
+		[HttpPost]
+		public ActionResult UpdateCategory(int id)
+		{
+			var category = marketContext.Categories.Find(id);
+            return View("UpdateCategory", category);
+        }
 
-    }
+	}
 }
